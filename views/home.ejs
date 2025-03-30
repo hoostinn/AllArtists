@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body id="AllartBG">
+    <%- include('partials/header.ejs') %>
+    <h3 id = "welcoming">Welcome!</h3>
+    <br>
+    <h3 id = "welcoming">Click on a Artist's name for info!</h3>
+    <div>
+        
+        <% for (let artist of artistsList) { %>
+            <div>
+                <img id = "imagePRE" src="<%= artist.image_url %>">
+                <a href="/artistinfo/<%= artist.artistId %>">
+                    <h4 id ="linkToArtist"><%= artist.name %></h4>
+                </a>
+            </div>
+        <% } %>
+
+ 
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+    <%- include('partials/scripts.ejs') %>
+
+    <!-- for loop for artists - with image and name -->
+</body>
+
+</html>

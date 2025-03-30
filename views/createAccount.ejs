@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body id ="login">   
+    <h1 class = "bg-info p-4 text-white" id = "opening">Create Account</h1>
+    <form action="/createAccount" method="post" id = "typer">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <%= usernameMessage %>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <%= passwordMessage %>
+        <div>
+            <label for="repeatPassword">Repeat Password</label>
+            <input type="password" id="repeatPassword" name="repeatPassword">
+        </div>
+        <%= repeatPasswordMessage %>
+        <br>
+        <button class="btn btn-success" type="submit">Create Account</button>
+        
+
+    <%- include('partials/scripts.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include("partials/head.ejs")%>
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+        <h1 id="welcoming">Artist Info</h1>
+
+        <!--Artist Picture-->
+        <form action="/addFavorite" method="POST" id="addFavorite">
+            <input type="hidden" name="artistId" value="<%= artistInfo.artistId %>">
+            <button type="submit">Add to favorites</button>
+        </form>
+        <!--Full Name-->
+
+        <h1 id="welcoming">
+            <%= artistInfo.geniusInfo.name %>
+        </h1>
+        <!--Biography-->
+
+        <p class="bio">
+            <%= artistInfo.geniusInfo.description_annotation.annotations[0]?.body?.plain || "Biography not available."
+                %>
+        </p>
+
+        <div class="externalLinks">
+            <a class="externalLinks" href="<%= artistInfo.geniusInfo.url %>">More Info: Genius</a>
+            <a class="externalLinks" href="<%= artistInfo.spotifyArtistInfo.external_urls.spotify %>">More Info:
+                Spotify</a>
+        </div>
+
+
+        <!-- Tracks Info  -->
+        <ul>
+            <% artistInfo.spotifyAlbumsInfo.items.forEach(function(album, index) { %>
+                <li>
+                    <h5>
+                        <p id="welcoming">
+                            <%= album.name %> - Released on: <%= album.release_date %>
+                        </p>
+                    </h5>
+                    <img id="imagePRE" src="<%= album.images[0].url %>" alt="Album Image">
+                </li>
+                <% }) %>
+        </ul>
+        <%- include('partials/footer.ejs') %>
+            <%- include('partials/scripts.ejs') %>
+</body>
+
+</html>

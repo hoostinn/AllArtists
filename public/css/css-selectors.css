@@ -1,0 +1,107 @@
+#opening {
+    font-weight:bold;
+    text-align:center;
+}
+
+#welcoming{
+    font-weight:bold;
+    text-align:center;
+}
+
+#login {
+    background-color: rgb(184, 183, 181);
+}
+
+#albumInfo{
+    text-align:center;
+}
+
+#typer {
+    margin-left:38%
+}
+
+#typer1 {
+    margin-left:45%
+}
+
+#logBtn {
+    margin-left:15%
+}
+
+#username {
+    font-weight:bold;
+}
+
+#createBtn {
+    margin-left:45%;
+    font-weight:bold;
+}
+
+#menuBtn {
+    margin-left:43%;
+    font-weight:bold;
+}
+
+#logoutBtn {
+    margin-left:47%;
+    font-weight:bold;
+}
+
+#imagePRE{
+    width:300px;
+    height:300px;
+    margin-left: 40%;
+}
+
+#linkToArtist {
+    text-align: center;
+}
+
+#AllartBG {
+    background-color:aquamarine;
+}
+
+#AllartBG1 {
+    background-color:rgb(178, 211, 200);
+}
+
+#AllartBG2 {
+    background-color:rgb(105, 129, 133);
+}
+
+#footType {
+    font-weight: bold;
+}
+
+#titleForAllArtist{
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#spotfiyInfo{
+    margin-left:45%;
+}
+
+.flex-container {
+    display: flex;
+    background-color: rgb(139, 190, 241);
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+.externalLinks{
+    text-align:center;
+}
+.bio{
+    text-align:center;
+}
+#addFavorite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body id="AllartBG1">
+    <%- include('partials/header.ejs') %>
+    <h3 id = "welcoming">Welcome, <%= username %>!</h3>
+
+    <div>
+        <h4 id = "welcoming">Your favorite artists:</h4>
+        <ul>
+            <% for (let artist of favoritesList) { %>
+                <li>
+                    <img id = "imagePRE" src="<%= artist.image_url %>">
+                    <h4 id ="linkToArtist"><%= artist.name %></h4>
+
+                    <form id = "logoutBtn" action="/removeFavorite" method="POST">
+                        <input type="hidden" name="artistId" value="<%= artist.artistId %>">
+                        <button class="btn btn-danger" type="submit">remove</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+
+
+
+
+    <%- include('partials/footer.ejs') %>
+    <%- include('partials/scripts.ejs') %>
+</body>
+
+</html>
